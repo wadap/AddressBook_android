@@ -41,7 +41,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="button"
-            android:id="@+id/submitButton" android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:id="@+id/submitButton"
             android:onClick="onClick"
+            android:layout_below="@+id/editText2" android:layout_centerHorizontal="true"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="登録したやつみる"
+            android:id="@+id/view"
+            android:layout_marginTop="63dp" android:layout_below="@+id/submitButton"
+            android:layout_centerHorizontal="true"
+            android:onClick="showData"
             />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/name_view" android:layout_below="@+id/view" android:layout_centerHorizontal="true"
+            android:layout_marginTop="51dp"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/email_view" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="33dp"/>
 </RelativeLayout>

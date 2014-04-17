@@ -1,19 +1,25 @@
 package jp.wadap.addressbook.app;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import org.w3c.dom.Text;
 
 public class MainActivity extends ActionBarActivity {
+
+    SharedPreferences sharedPref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
     }
 
 
@@ -45,7 +51,19 @@ public class MainActivity extends ActionBarActivity {
 
         i.putExtra("email", email.getText().toString());
         i.putExtra("name",  name.getText().toString());
-
         startActivity(i);
+    }
+
+    public void showData(View view){
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+
+        String email = sharedPref.getString(SubmitActivity.key_email, "").toString();
+        String name  = sharedPref.getString(SubmitActivity.key_name, "").toString();
+
+        TextView email_view = (TextView)findViewById(R.id.email_view);
+        TextView name_view  = (TextView)findViewById(R.id.name_view);
+
+        email_view.setText(email);
+        name_view.setText(name);
     }
 }

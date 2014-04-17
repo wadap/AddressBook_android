@@ -32,4 +32,12 @@
             android:id="@+id/email"
             android:layout_marginTop="25dp" android:layout_below="@+id/name" android:layout_alignLeft="@+id/name"
             android:layout_alignStart="@+id/name"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            android:id="@+id/button"
+            android:layout_centerVertical="true" android:layout_alignLeft="@+id/email"
+            android:onClick="onClick"
+            android:layout_alignStart="@+id/email"/>
 </RelativeLayout>
