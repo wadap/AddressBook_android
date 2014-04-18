@@ -22,7 +22,6 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         
@@ -65,5 +64,13 @@ public class MainActivity extends ActionBarActivity {
 
         email_view.setText(email);
         name_view.setText(name);
+    }
+
+    public void clear(View view){
+        TextView name  = (TextView)findViewById(R.id.editText);
+        TextView email = (TextView)findViewById(R.id.editText2);
+
+        name.setText("");
+        email.setText("");
     }
 }
